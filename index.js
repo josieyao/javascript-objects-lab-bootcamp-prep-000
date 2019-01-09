@@ -74,6 +74,24 @@ var newObj = Object.assign({}, obj);
    return newObj;
  }
  
+ /* describe('destructivelyDeleteFromObjectByKey(object, key)', function() {
+    it('returns object without the delete key/value pair', function() {
+      var obj = { prop: 1 }
+      var newObj = destructivelyDeleteFromObjectByKey(obj, 'prop');
+
+      expect(newObj['prop']).toBe(undefined)
+    })
+
+    it('modifies the original object', function() {
+      var obj = { prop: 1 }
+      var newObj = destructivelyDeleteFromObjectByKey(obj, 'prop');
+
+      expect(obj['prop']).toBe(undefined)
+    })
+  })
+
+})*/
+ 
  function destructivelyDeleteFromObjectByKey(object, key){
    delete object[key];
    return object;
